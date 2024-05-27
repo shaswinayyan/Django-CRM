@@ -44,6 +44,8 @@
 {% else %}
 
 <div class="col-md-6 offset-md-3">
+<br/>
+<br/>
 <h1>Login</h1>
 <form method="POST" action="{% url 'home' %}">
     {% csrf_token %}
@@ -61,6 +63,10 @@
         <button type="submit" class="btn btn-primary">Login</button>
       </form>
 </form>
+<br/>
+<h5> Haven't registered yet? </h5>
+<br/>
 
+<a href="{% url 'register' %}" class="btn btn-warning">Register Now</a>
 {% endif %}
 {% endblock %}
